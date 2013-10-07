@@ -1,0 +1,35 @@
+@import "bootstrap";
+
+body {
+  padding-bottom: 70px;
+
+}
+
+.navbar .brand {
+  font-size: 15px;
+  color: white;
+}
+
+.form-group > .park {
+    background-color: #3B3B3B;
+    border-color: black;
+    color: white;
+}
+
+.container > img {
+  
+  width: 32px;
+  height: 40px;
+  float: left;
+  margin-left: 6px;
+}
+
+.jumbotron {
+  background-color: #eeeeee;
+  width: 100%;
+  padding-top: 70px;
+   .container {
+   text-align: center;
+   }
+
+}
