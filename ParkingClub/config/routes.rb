@@ -9,5 +9,11 @@ ParkingClub::Application.routes.draw do
 
   resources :lots
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  delete "logout" => "sessions#destroy", as: "logout"
+
+  get "login" => "sessions#new", as: "login"
+
 
 end

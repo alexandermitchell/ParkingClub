@@ -1,20 +1,22 @@
 class LotsController < ApplicationController
 
+  before_action :require_login
+
   def index
     @lots = Lot.all
   end
 
   def new
     if current_user.owner
-    @lot = Lot.new
+      @lot = current_user.owned_lots.build
     end
   end
 
   def create
     if current_user.owner
-    @lot = Lot.new(lot_params)
+    @lot = current_user.owned_lots.build(lot_params)
       if @lot.save
-        redirect_to lot_path(@lot)
+        redirect_to lot_path(@lot), notice: "Project created!"
       else
         render :new
       end
@@ -28,7 +30,7 @@ class LotsController < ApplicationController
   protected
 
   def lot_params
-    params(:lot).permit(:name, :country, :province, :city, :latitude, :longitude, :address, :owner_id)
+    params.require(:lot).permit(:name, :country, :province, :city, :latitude, :longitude, :address, :owner_id)
   end
 
 
