@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
 
-  before_action: :require_login, except: [:new, :create]
+  before_action :require_login, except: [:new, :create, :new_owner]
 
   def new
+    @user = User.new
+  end
+
+  def new_owner
     @user = User.new
   end
 
@@ -17,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+
   end
 
   private

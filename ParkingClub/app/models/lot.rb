@@ -12,4 +12,6 @@ class Lot < ActiveRecord::Base
     [address, city, province, country].compact.join(', ')
   end
 
+  
+
 end

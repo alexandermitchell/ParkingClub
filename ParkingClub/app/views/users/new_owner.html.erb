@@ -1,11 +1,8 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1>You're almost there!</h1>
-  </div>
-</div>
-
 <div class="user-form">
   <%= form_for @user do |f| %>
+
+    <%= f.hidden_field :owner, :value => true %>
+
     <%= render 'form', f: f %>
   <% end %>
 </div>

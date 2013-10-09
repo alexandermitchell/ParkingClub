@@ -1,14 +1,11 @@
 @import "bootstrap";
 
 body {
-  padding-bottom: 70px;
+  padding-top: 45px;
 
 }
 
-.navbar .brand {
-  font-size: 15px;
-  color: white;
-}
+.navbar
 
 .form-group > .park {
     background-color: #3B3B3B;
@@ -18,8 +15,8 @@ body {
 
 .container > img {
   
-  width: 32px;
-  height: 40px;
+  width: 35px;
+  height: 45px;
   float: left;
   margin-left: 6px;
 }
@@ -27,9 +24,13 @@ body {
 .jumbotron {
   background-color: #eeeeee;
   width: 100%;
-  padding-top: 70px;
    .container {
    text-align: center;
    }
 
+}
+
+.naaav > .navinner > .navcontainer > .naynav {
+  
+  height: 50px;
 }
