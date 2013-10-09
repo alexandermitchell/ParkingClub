@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  price_in_cents: 1
+  days: 1
+  weeks: 1
+  months: 1
+  years: 1
+  lot_id: 1
+
+two:
+  price_in_cents: 1
+  days: 1
+  weeks: 1
+  months: 1
+  years: 1
+  lot_id: 1

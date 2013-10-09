@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131007204827) do
+ActiveRecord::Schema.define(version: 20131009020855) do
 
   create_table "lots", force: true do |t|
     t.string   "name"
@@ -24,6 +24,24 @@ ActiveRecord::Schema.define(version: 20131007204827) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
+  end
+
+  create_table "memberships", force: true do |t|
+    t.integer  "price_in_cents"
+    t.integer  "days"
+    t.integer  "weeks"
+    t.integer  "months"
+    t.integer  "years"
+    t.integer  "lot_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "memberships_users", force: true do |t|
+    t.integer  "membership_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

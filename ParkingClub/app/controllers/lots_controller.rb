@@ -25,10 +25,10 @@ class LotsController < ApplicationController
     @lot = Lot.find(params[:id])
   end
 
-  def edit
-    if current_user.id = @lot.owner_id
-      @
+  protected
 
+  def lot_params
+    params(:lot).permit(:name, :country, :province, :city, :latitude, :longitude, :address, :owner_id)
   end
 
 

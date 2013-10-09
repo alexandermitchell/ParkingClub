@@ -2,6 +2,10 @@ class Lot < ActiveRecord::Base
 
   belongs_to :owner, class: :user, foreign_key: :owner_id
 
+  has_many :memberships
+
+  has_many :users, through: :memberships
+
   geocoded_by :address
 
   reverse_geocoded_by :latitude, :longitude, :address => :full_address
