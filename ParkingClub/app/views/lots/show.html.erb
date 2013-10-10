@@ -1,3 +1,4 @@
 <h1><%= @lot.name %></h1>
-
+<div class="pull-right map">
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@lot.latitude}%2C#{@lot.longitude}" %>
+</div>
