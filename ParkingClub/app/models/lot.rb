@@ -9,6 +9,7 @@ class Lot < ActiveRecord::Base
   geocoded_by :lot_address
 
   reverse_geocoded_by :latitude, :longitude, :lot_address => :full_address
+  validates :name, :address, :city, :province, :country, :daily_rate_in_cents, presence: true
 
   after_validation :geocode, :reverse_geocode
 
@@ -16,6 +17,12 @@ class Lot < ActiveRecord::Base
     [address, city, province, country].compact.join(', ')
   end
 
-  
+  def self.search(search)
+    if search
+      @lots = Lot.near(search, 5, :units => :km)
+    else
+      @lots = Lot.all
+    end
+  end
 
 end

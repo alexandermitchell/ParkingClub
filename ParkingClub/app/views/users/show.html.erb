@@ -1,1 +1,17 @@
-<h1>Your Profile</h1>
+<h1 class="passes-header">My Passes</h1>
+
+
+<% @memberships.each do |membership| %>
+<div class="user-membership">
+
+  <div>
+    <p><%= membership.lot.name %></p>
+    <p>Purchased On: <%= Time.now.strftime("%m/%d/%Y") %></p>
+  </div>
+
+  <div>
+    <p><%= distance_of_time_in_words(membership.days_remaining)%> Remaining</p>
+  </div>
+
+</div>
+<%end%>

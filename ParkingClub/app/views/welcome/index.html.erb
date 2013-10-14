@@ -4,3 +4,12 @@
     <p><a class="btn btn-primary btn-lg">Learn more</a></p>
   </div>
 </div> -->
+
+<div class="lot-search">
+<%= form_tag lots_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil, class: 'btn btn-success' %>
+  </p>
+<%end%>
+</div>

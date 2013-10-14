@@ -1,0 +1,6 @@
+
+<% @lots.each do |lot| %>
+<div class="test-lot-search">
+<%= link_to lot.name, lot_path(lot) %>
+</div>
+<% end %>

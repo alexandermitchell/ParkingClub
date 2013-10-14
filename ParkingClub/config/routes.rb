@@ -7,7 +7,9 @@ ParkingClub::Application.routes.draw do
     end
   end
 
-  resources :lots
+  resources :lots do
+    resources :memberships
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
 

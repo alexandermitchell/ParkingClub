@@ -3,7 +3,7 @@ class LotsController < ApplicationController
   before_action :require_login
 
   def index
-    @lots = Lot.all
+    @lots = Lot.search(params[:search])
   end
 
   def new
@@ -25,12 +25,13 @@ class LotsController < ApplicationController
 
   def show
     @lot = Lot.find(params[:id])
+    @membership = @lot.memberships.build
   end
 
   protected
 
   def lot_params
-    params.require(:lot).permit(:name, :country, :province, :city, :latitude, :longitude, :address, :owner_id)
+    params.require(:lot).permit(:name, :country, :province, :city, :latitude, :longitude, :address, :owner_id, :daily_rate_in_cents)
   end
 
 

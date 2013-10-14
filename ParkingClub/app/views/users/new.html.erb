@@ -1,11 +1,13 @@
-<div class="jumbotron">
-  <div class="container">
+<div class="jumbotron almost">
+  <div class="container almost-container">
     <h1>You're almost there!</h1>
   </div>
 </div>
 
-<div class="user-form">
+<div class="user-form" id="user">
+  <div id="form">
   <%= form_for @user do |f| %>
     <%= render 'form', f: f %>
   <% end %>
+  </div>
 </div>
