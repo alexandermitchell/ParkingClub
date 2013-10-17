@@ -1,6 +1,9 @@
+<%= gmaps( :map_options => { :container_class => "lot-map" }, "markers" => {"data" => @json, "options" => {"auto_zoom" => false} }) %>
 
-<% @lots.each do |lot| %>
-<div class="test-lot-search">
-<%= link_to lot.name, lot_path(lot) %>
+<div class="result-wrapper">
+  <% @lots.each do |lot| %>
+    <div class="test-lot-search">
+    <%= link_to lot.name, lot_path(lot) %>
+    </div>
+  <% end %>
 </div>
-<% end %>

@@ -22,7 +22,50 @@
   margin-right: 20px;
 }
 
-.test-lot-search {
-  margin-top: 70px;  
+.result-wrapper {
+  margin-left: 380px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 500px;
 
+  background: rgba(255, 255, 255, 0.3);
+   border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+
+}
+
+.test-lot-search {
+  text-align: left;
+  height: 100px;
+  padding: 7px;
+  border-top: 1px inset #919191;
+  border-bottom: 1px inset #919191;
+  a {
+    font-size: 30px;
+    color: #1F1F1F
+  }
+}
+
+.lot-map {
+  width: 400px;
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  float: right;
+  margin-right: 20%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.lot-map #map {
+  width: 400px;
+  height: 400px;
 }

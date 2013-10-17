@@ -4,14 +4,18 @@
   <title>ParkingClub</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= yield :scripts %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div>
 <%= render 'layouts/shared/nav' %>
+<%= render 'layouts/shared/side_search' %>
 <%= render 'layouts/shared/show_flash' %>
 <%= yield %>
 <%= render 'layouts/shared/nav_footer' %>
-
+</div>
 
 </body>
 </html>

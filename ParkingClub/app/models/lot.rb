@@ -8,12 +8,18 @@ class Lot < ActiveRecord::Base
 
   geocoded_by :lot_address
 
+  acts_as_gmappable
+
   reverse_geocoded_by :latitude, :longitude, :lot_address => :full_address
   validates :name, :address, :city, :province, :country, :daily_rate_in_cents, presence: true
 
   after_validation :geocode, :reverse_geocode
 
   def lot_address
+    [address, city, province, country].compact.join(', ')
+  end
+
+  def search_address
     [address, city, province, country].compact.join(', ')
   end
 

@@ -2,6 +2,7 @@
 
 html, body {
   height: 100%;
+  max-width: 1200px;
 }
 
 .btn {
@@ -10,25 +11,23 @@ html, body {
 
 body {
   padding-top: 40px;
-  background-image:url(http://www.airportparkingscout.com/assets/indoor.jpg);
+  background-image:url(http://ideasgn.com/wp-content/uploads/2013/04/1111-Lincoln-Road-Herzog-de-Meuron-vis.jpg);
   background-size: 100% 100%;
   background-attachment: fixed;
 }
 
-.container > img {
+.navcontainer {
+margin-right: 5px;
+padding-left: 5px;
+min-width: 99%;
+}
+
+.navcontainer > img {
   
   width: 33px;
   height: 40px;
   float: left;
   margin-left: 6px;
-}
-
-.jumbotron {
-  width: 100%;
-   .container {
-   text-align: center;
-   }
-
 }
 
 .navfooter {
@@ -41,13 +40,13 @@ background-image: linear-gradient(to bottom, #222222, #111111);
 background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0);
 border-color: #252525;
-  height: 60px;
+  height: 40px;
   width: 100%;
 
 }
+
 .navfooter-pull-right {
   display: inline-block;
-
 
 }
 
@@ -88,32 +87,18 @@ border-color: #252525;
 }
 
 .logout-btn {
-  font: bold;
-  
-  background-color: hsl(0, 69%, 28%) !important;
+  background-color: hsl(0, 79%, 37%) !important;
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ce2525", endColorstr="#781616");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ce2525), to(#781616));
-  background-image: -moz-linear-gradient(top, #ce2525, #781616);
-  background-image: -ms-linear-gradient(top, #ce2525, #781616);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ce2525), color-stop(100%, #781616));
-  background-image: -webkit-linear-gradient(top, #ce2525, #781616);
-  background-image: -o-linear-gradient(top, #ce2525, #781616);
-  background-image: linear-gradient(#ce2525, #781616);
-  border-color: #781616 #781616 hsl(0, 69%, 23%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94343", endColorstr="#a81313");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e94343), to(#a81313));
+  background-image: -moz-linear-gradient(top, #e94343, #a81313);
+  background-image: -ms-linear-gradient(top, #e94343, #a81313);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e94343), color-stop(100%, #a81313));
+  background-image: -webkit-linear-gradient(top, #e94343, #a81313);
+  background-image: -o-linear-gradient(top, #e94343, #a81313);
+  background-image: linear-gradient(#e94343, #a81313);
+  border-color: #a81313 #a81313 hsl(0, 79%, 31.5%);
   color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
   -webkit-font-smoothing: antialiased;
-}
-
-.lot-search {
-  width: 940px;
-  height: 40px;
-  margin: 0 auto;
-
-  form > p {
-  width: 940px;
-  height: 60px;
-  margin: 0 auto;
-  }
 }

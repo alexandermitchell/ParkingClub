@@ -6,7 +6,7 @@
 
   <div>
     <p><%= membership.lot.name %></p>
-    <p>Purchased On: <%= Time.now.strftime("%m/%d/%Y") %></p>
+    <p>Purchased On: <%= membership.created_at.strftime("%m/%d/%Y") %></p>
   </div>
 
   <div>

@@ -5,7 +5,7 @@ class Membership < ActiveRecord::Base
   validates :start_time, :end_time, presence: true
 
   def days_remaining
-    self.end_time - Time.now
+  self.end_time - Time.now
   end
 
 end

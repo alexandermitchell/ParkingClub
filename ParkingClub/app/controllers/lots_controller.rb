@@ -4,6 +4,7 @@ class LotsController < ApplicationController
 
   def index
     @lots = Lot.search(params[:search])
+    @json = Lot.search(params[:search]).to_gmaps4rails
   end
 
   def new

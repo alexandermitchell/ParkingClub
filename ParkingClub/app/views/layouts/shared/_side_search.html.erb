@@ -1,0 +1,10 @@
+<div class="jumbotron hideside">
+  <div class="container sidebar">
+    <div class="lot-search">
+      <%= form_tag lots_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], :placeholder => "Enter a location", class: 'searchbar' %>
+        <%= submit_tag "Search", :name => nil, class: 'btn btn-default login-btn search-side-button' %>
+      <%end%>
+    </div>
+  </div>
+</div>
